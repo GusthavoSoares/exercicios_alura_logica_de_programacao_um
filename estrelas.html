@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Jogo de Advinhação</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+
+         
+
+            function pulaLinha(){
+                document.write("<br>");
+            }
+
+            function mostra(frase){
+                document.write(frase);
+            }
+            for(linha = 1; linha <= 3; linha++){
+                
+                for(i=0;i<10;i++){
+                    mostra('*');
+                
+                }
+                pulaLinha();
+            }
+            
+            var numeroFlutuante = parseFloat(prompt("Insira um numero decimal"))
+
+            mostra(numeroFlutuante);
+            pulaLinha();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+    <meta charset="UTF-8">
+    <title>Verificando a idade</title>
+    <body>
+    <script>
+
+        function pulaLinha(){
+            document.write("<br>")
+        }
+        function mostra(frase){
+            document.write(frase);
+            pulaLinha();
+        }
+
+        var idade = parseInt(prompt('Insira a sua idade'))
+        
+        while(isNaN(idade)){
+            var idade = parseInt(prompt('Insira a sua idade'))
+        }
+
+        mostra(`A sua idade é ${idade}`);
+    </script>
+    </body>
+</html>

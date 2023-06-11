@@ -1,0 +1,24 @@
+<html>
+    <meta charset="UTF-8">
+    <body>
+        <script>
+
+            function pulaLinha(){
+                document.write("<br><hr><br>");
+                document.write("")
+            }
+            function mostrar(frase){
+                document.write(`<big>${frase}</big>`);
+                pulaLinha();
+            }
+            function calcularIdade(anoAtual,anoNascimento){
+                return anoAtual - anoNascimento;
+            }
+
+            var ano = 2023;
+            mostrar(`Eu sou o Gusthavo e eu tenho ${calcularIdade(2023, 2005)} anos`)
+
+        </script>
+        
+    </body>
+</html>

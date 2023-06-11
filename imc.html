@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Calculadora de IMC</title>
+    </head>
+    <body>
+        <meta charset="UTF-8">
+        
+        <script>
+            function pulaLinha(){
+                document.write("<br>")
+            }
+            function mostrar(frase){
+                document.write(frase);
+                pulaLinha();
+            }
+
+            function calculaIMC(peso,altura){
+                
+                
+                return peso / (altura * altura)
+            }
+
+            function enganacao(valor1,valor2,valor3){
+                return "Você foi enganado!";
+            }
+            //prompt = pede para o usuário colocar um valor de entrada
+            var nome = prompt("Informe o seu nome: ");
+            var pesoInformado = prompt(nome + ", informe o seu peso: ");
+            var alturaInformada = prompt( nome + ", informe a sua altura: ");
+          
+        
+           
+           var imcCalculado = parseInt(calculaIMC(pesoInformado,alturaInformada));
+
+
+            mostrar("O IMC de " + nome +" é " + imcCalculado);
+
+            if(imcCalculado < 18.5){
+                mostrar( "Você precisa ganhar mais massa, pois tem que chegar até 18 de IMC!");
+            }else if(imcCalculado > 35){
+                mostrar("Você precisa emagrecer, pois seu IMC tem que estar abaixo de 35!");
+            }else if(imcCalculado >= 18.5 && imcCalculado <= 35){
+                mostrar("Seu IMC está normal, continue assim!");
+            }
+            mostrar(enganacaoTexto);
+        </script>
+    </body>
+</html>

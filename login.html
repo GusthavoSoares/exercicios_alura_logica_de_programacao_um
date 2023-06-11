@@ -1,0 +1,43 @@
+<html>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <body>
+        <script>
+            var maximoTentativas = 3;
+            var tentativas = 1;
+            var senhaCadastrada = "12345";
+            var loginCadastrado = "Gusthavo";
+            
+            
+            
+
+                function pulaLinha(){
+                    document.write('<br>');
+                }
+                function mostra(frase){
+                    document.write(frase);
+                    pulaLinha()
+                }
+
+                while(tentativas <= maximoTentativas){
+                    var login = prompt("Informe o seu login: ");
+                    var senha = prompt("Informe a sua senha");
+
+                    if(loginCadastrado == login  && senhaCadastrada == senha ){
+                    mostra("Seja bem vindo " + login);
+                    tentativas = maximoTentativas;
+                
+                    }else{
+                        if(tentativas == 3){
+                        alert("Número de tentativas máximas atingido!")
+                        }else{
+                        alert("Login inválido! Tente novamente.")
+                    }
+                }
+               tentativas++;
+
+            }
+        </script>
+
+    </body>
+</html>

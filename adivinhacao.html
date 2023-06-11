@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Jogo de Advinhação</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+
+         
+
+            function pulaLinha(){
+                document.write("<br>");
+            }
+
+            function mostra(frase){
+                document.write(frase);
+            }
+
+            function sorteia(n){
+                return Math.round(Math.random() * n)
+            }
+
+            var numeroPensado = parseInt(sorteia(10));
+            
+            for(tentativas = 1; tentativas < 4; tentativas++){
+
+           
+                var chute = parseInt(prompt("Digite seu chute!"));
+
+                if(numeroPensado == chute){
+                    mostra("Você acertou!");
+                    break;
+                }else if(chute > numeroPensado && tentativas == 3){
+                    mostra("Você errou! Seu chute foi maior que o número pensado que era: " + numeroPensado);
+                   
+                }else if(chute < numeroPensado && tentativas == 3){
+                    mostra("Você errou! Seu chute foi menor que o número pensado que era " + numeroPensado);
+    
+                }else{
+                    alert("Chute incorreto, tente novamente!");
+                }
+        }
+        </script>
+    </body>
+</html>
